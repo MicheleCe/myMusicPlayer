@@ -1,0 +1,126 @@
+.bi-volume-mute {
+  display: none;
+}
+.bi-volume-down {
+  display: none;
+}
+
+.playbar {
+    background-color: rgb(24, 24, 24);
+    height: 75px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    h4 {
+        font-size: 0.8rem;
+     }
+     h5 {
+         font-size: 0.7rem;
+     }
+}
+
+.info {
+    width: 230px;
+    min-width: 130px;
+    .bi-heart-fill {
+    display: none;
+    }
+    .bi-repeat-1 {
+    display: none;
+    }
+}
+
+.navButtonPlay {
+    width: 100%;
+    .bi-pause-circle-fill {
+        display: none;
+    }
+    .bi-repeat-1 {
+        display: none;
+    }
+    .player-range {
+        height: 5px;
+        width: 400px;
+        background: #555;
+        border-radius: 15px;
+    }
+    .player {
+      width: 2px;
+      height: 5px;
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      position: relative;
+    }
+    @media screen and (max-width: 992px) {
+        .player-range {
+            width: 200px;
+        }
+    }
+
+    .player-container:active {
+      .player{
+        background: #2ecc71;
+      }
+    }
+    .player-container:hover {
+      .player{
+        background: #2ecc71;
+      }
+    }
+    .player-button {
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      background: #fff;
+      position: absolute;
+      right: -8px;
+      top: -3px;
+      cursor: pointer;
+      pointer-events:none;
+    }
+}
+
+.navButtVol {
+    width: 230px;
+    min-width: 130px;
+    .volume-range {
+        height: 5px;
+        width: 50px;
+        background: #555;
+        border-radius: 15px;
+    }
+    .volume {
+      height: 5px;
+      width: 50px;
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      position: relative;
+    }
+    .volume-container:active {
+      .volume{
+        background: #2ecc71;
+      }
+    }
+    .volume-container:hover {
+      .volume{
+        background: #2ecc71;
+      }
+    }
+    .volume-button {
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      background: #fff;
+      position: absolute;
+      right: -8px;
+      top: -3px;
+      cursor: pointer;
+      pointer-events:none;
+    }
+}
+
+
+
+

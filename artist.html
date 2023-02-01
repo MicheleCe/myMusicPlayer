@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./artist css/artistSection.css">
+  </head>
+  <body>
+    <div class="artistContainer"></div>
+    <div class="songContainer d-flex flex-column">
+        <div class="d-flex align-items-center"><button class=" playBB playNotWorking m-4"><i class="bi fs-1 bi-play-circle-fill"></i></button>
+            <p class="follow text-white fw-bold m-0 text-uppercase">Follow</p><i class="ms-3 text-white bi bi-three-dots"></i>
+        </div>
+        <div class="ms-4 text-white d-flex">
+            <h3 class="col-8">Popolari</h3>
+            <h3 class="col-4 text-nowrap">Brani che ti Piaccionio</h3>
+        </div>
+        <div class="lastDiv">
+            <div class="innerSongContainer mx-4 col-8"></div>
+            <div class="col-4"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="playbar text-light">
+        <div class=" d-flex justify-content-between align-items-center h-100">
+            <div class="currentlyPlaying info d-flex align-items-center">
+                <div class="mx-3">
+                    <h4 class="SongTitle fw-bold m-0"></h4>
+                    <h5 class="ArtistName fw-light m-0 mt-1"></h5>
+                </div>
+                <div class="ms-2">
+                    <i class="bi like bi-heart"></i>
+                    <i class="bi liked bi-heart-fill text-success"></i>
+                </div>
+            </div>
+            <div class="navButtonPlay w-50 d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center">
+                    <i class="bi mx-2 bi-shuffle"></i>
+                    <i class="bi mx-2 bi-skip-start-fill"></i>
+                    <i class="bi pause mx-2 fs-3 bi-pause-circle-fill"></i>
+                    <i class="bi play mx-2 fs-3 bi-play-circle-fill"></i>
+                    <i class="bi mx-2 bi-skip-end-fill"></i>
+                    <i class="bi repeat mx-2 bi-repeat"></i>
+                    <i class="bi repeat1 mx-2 bi-repeat-1"></i>
+                </div>
+                <div class="progressBar d-flex justify-content-center align-items-center w-100"> 
+                    <h5 class="mx-4 m-0 current-time"></h5>
+                    <div class="player-container">
+                      <div class="player-range">
+                        <div class="player">
+                          <div class="player-button"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="mx-4 m-0 totalDuration"></h5>
+                </div>
+            </div>
+            <div class="navButtVol d-flex align-items-center">
+                <i class="bi mx-2 bi-blockquote-left"></i>
+                <i class="bi mx-2 bi-music-note-list"></i>
+                <i class="bi mx-2 bi-speaker"></i>
+                <i class="bi mx-2 bi-volume-down"></i>
+                <i class="bi mx-2 bi-volume-mute"></i>
+                <i class="bi mx-2 bi-volume-up"></i>
+                  <div class="volume-container d-flex align-items-center">
+                      <div class="volume-range">
+                        <div class="volume">
+                          <div class="volume-button"></div>
+                        </div>
+                      </div>
+                  </div>
+                <i class="bi mx-4 bi-arrows-angle-expand"></i>
+            </div>
+        </div>
+    </div>
+    <script src="./artist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
