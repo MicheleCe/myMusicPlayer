@@ -228,7 +228,7 @@ function playerSlide(event) {
 function updateTime (time) {
   const seconds = String(Math.floor(time % 60) || 0).padStart("2", "0");
   const minutes = String(Math.floor(time / 60) || 0).padStart('0');
-  let timer = minutes + "" + seconds
+  let timer = minutes + ":" + seconds
   return timer
 }
 

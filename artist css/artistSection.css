@@ -39,8 +39,17 @@
   visibility: hidden;
 }
 
+.songList > div > h5 {
+  font-size: 0.9rem;
+  color: rgb(89, 89, 89);
+}
+
+.songList {
+  transition: 0.5s;
+}
+
 .songList:hover {
-  background-color: #555;
+  background-color: rgba(85, 85, 85, 0.509);
 }
 .songList:hover .musicPlayButton {
   visibility: visible;

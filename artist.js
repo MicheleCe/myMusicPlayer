@@ -83,7 +83,7 @@ function containerSongs(songTitle, album, songDuration, rank, track, artistName,
         <div class="d-flex w-100 ms-3 align-items-center my-3">
             <div class="col-6 d-flex align-items-center"><img src="${album}"><h5 class="mx-2">${songTitle}</h5></div>
             <h5 class="col-3">${rank}</h5>
-            <h5 class="col-3">${Math.round(songDuration)}</h5>
+            <h5 class="col-3">${updateTime(songDuration*10)}</h5>
         </div>
     </div>`
 }
@@ -252,10 +252,9 @@ function playerSlide(event) {
   }
 }
 
-function updateTime (time) {
+function updateTime(time) {
   const seconds = String(Math.floor(time % 60) || 0).padStart("2", "0");
   const minutes = String(Math.floor(time / 60) || 0).padStart('0');
-  let timer = minutes + "" + seconds
+  let timer = minutes + ":" + seconds
   return timer
 }
-
