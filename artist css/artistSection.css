@@ -1,3 +1,7 @@
+body {
+  width: 100%;
+}
+
 .bi-volume-mute {
   display: none;
 }
@@ -39,9 +43,27 @@
   visibility: hidden;
 }
 
+.likedSongss {
+  margin-top: 20px;
+}
+.likedSongss img {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.likedSongss h4 {
+  font-size: 0.9rem;
+  color: #fff;
+}
+.likedSongss h5 {
+  font-size: 0.9rem;
+  color: rgba(171, 171, 171, 0.702);
+}
+
 .songList > div > h5 {
   font-size: 0.9rem;
-  color: rgb(89, 89, 89);
+  color: rgba(171, 171, 171, 0.702);
 }
 
 .songList {

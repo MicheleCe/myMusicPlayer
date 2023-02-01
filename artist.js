@@ -21,6 +21,11 @@ const artistSearch = (input) => {
     .then((jsonPromise) => {
         console.log(jsonPromise);
         console.log(jsonPromise.name);
+        let likeReference = document.querySelector('.likedSongss')
+        likeReference.innerHTML += conteinerLiked (
+          jsonPromise.picture_small,
+          jsonPromise.name
+        )
         let listReference = document.querySelector('.artistContainer')
         listReference.innerHTML += containerArtist(
         jsonPromise.name,
@@ -40,16 +45,16 @@ const artistSearch = (input) => {
         .then((listPromise) => {
             console.log("iiii", listPromise);
             listPromise.data.forEach((element, i) => {
-                let listReference = document.querySelector('.innerSongContainer')
-                listReference.innerHTML += containerSongs(
-                    element.title,
-                    element.album.cover_small,
-                    element.duration/60,
-                    element.rank,
-                    element.preview,
-                    element.artist.name,
-                    i
-                )
+              let listReference = document.querySelector('.innerSongContainer')
+              listReference.innerHTML += containerSongs(
+                  element.title,
+                  element.album.cover_small,
+                  element.duration/60,
+                  element.rank,
+                  element.preview,
+                  element.artist.name,
+                  i
+              )
             });
         })
 
@@ -88,7 +93,16 @@ function containerSongs(songTitle, album, songDuration, rank, track, artistName,
     </div>`
 }
 
-
+function conteinerLiked (picture, name) {
+  return `
+  <img class="position-relative" src="${picture}">
+  <i class="bi position-absolute text-success bi-heart-fill"></i>
+  <div class="d-flex flex-column ms-3">
+    <h4 class="m-0 mb-2" >Hai messo Mi piace a x brani</h4>
+    <h5> Di ${name} </h5>
+  </div>
+  `
+}
 
 let audio = new Audio()
 
